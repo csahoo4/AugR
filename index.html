@@ -7,8 +7,18 @@
 	<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam;'>
 		<!-- <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
 		<!-- <a-marker-camera preset='hiro'></a-marker-camera> -->
+		<a-assets>
+      <video id="video" loop="true" src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" webkit-playsinline>
+    </a-assets>
 		
-	<a-assets>
+		<a-marker preset="custom" type="pattern" url="1.patt">
+         
+<!--          <a-video position="0 0.5 0" material="src: #1;"> -->
+<!-- 	<a-entity position="1 0 0" scale="8 8 8" text="value:Adena Pipe\n1901; color:yellow" look-at="[camera]"> -->
+<!-- 		</a-entity> -->
+			<a-video id="videoScreen" src="#video" width="16" height="16" autoplay=true></a-video>
+         </a-marker>
+<!-- 	<a-assets>
       <img id="1" src="1.jpg">	
     </a-assets>
 		
@@ -45,7 +55,7 @@
 		</a-entity>
 			</a-box>
 
-         </a-marker>
+         </a-marker> -->
 		
 		<a-entity camera></a-entity>
 	</a-scene>
